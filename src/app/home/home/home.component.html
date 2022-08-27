@@ -1,25 +1,29 @@
+<app-header></app-header>
+
 <header>
-  <div>
-    <span class="logo-1">The</span>
-    <span class="logo-2">Dev</span>
-    <span class="logo-3">Blog</span>
+
+  <div class="imm">
+
+    <img src="https://www.angularminds.com/angular-minds-admin/uploads/blog_images/fe9d43d6a3e539149b0928526f69ac7f.png" alt="">
 
   </div>
 </header>
 <main *ngIf="blogPosts$ | async as blogPosts">
-  <!-- <pre>
-    {{ blogPosts | json }}
+  <div class="mainbody">
 
-  </pre> -->
+    <div class="blog-posts-container" *ngFor="let blogPost of blogPosts.items">
+      <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="">
+      <h2>{{ blogPost.fields.title }}</h2>
+      <p class="author">{{ blogPost.fields.author }}</p>
+      <p class="summary">{{ blogPost.fields.summary }}</p>
+      <a [routerLink]="['blog', blogPost.sys.id]">Read More</a>
 
-  <div class="blog-posts-container" *ngFor="let blogPost of blogPosts.items">
-    <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="">
-    <h2>{{ blogPost.fields.title }}</h2>
-    <p class="author">{{ blogPost.fields.author }}</p>
-    <p class="summary">{{ blogPost.fields.summary }}</p>
-    <a [routerLink]="['blog', blogPost.sys.id]">Read More</a>
 
+    </div>
 
   </div>
 
+
+
 </main>
+<app-footer></app-footer>
