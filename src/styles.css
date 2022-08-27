@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #353535;
+
 }
 
 header {
@@ -12,6 +13,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #5800FF;
+  margin-bottom: 150px;
 }
 
 header div {
@@ -36,4 +39,42 @@ header div span {
 
 .logo-3 {
   letter-spacing: 20px;
+}
+
+.blog-posts-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding: 20px;
+  background-color: #5800FF;
+  border-radius: 10px;
+}
+
+.blog-posts-container img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blog-posts-container h2 {
+   margin-bottom: 20px;
+}
+
+.blog-posts-container .author {
+
+  margin-bottom: 20px;
+}
+
+.blog-posts-container .summary {
+
+  margin-bottom: 20px;
+}
+
+.blog-posts-container a {
+text-decoration: none;
+color: white;
+background-color: #353535;
+padding: 10px 20px;
+border-radius: 2px;
+display: inline-block;
+
 }

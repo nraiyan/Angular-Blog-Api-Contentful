@@ -1,5 +1,6 @@
 import { ContentfulService } from './../../services/contentful.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  blogPosts$: Observable<any> | undefined;
+
+
   constructor(private ContentfulService: ContentfulService) { }
 
   ngOnInit(): void {
-    this.ContentfulService.getAllEnteries();
+    this.blogPosts$ = this.ContentfulService.getAllEnteries();
   }
 
 }

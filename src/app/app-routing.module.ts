@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogpostComponent } from './blog/blogpost/blogpost.component';
 import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'blog/:id',
+    component: BlogpostComponent
+
   }
 ];
 
