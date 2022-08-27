@@ -11,8 +11,8 @@ export class ContentfulService {
 
   constructor() { }
   private client = createClient({
-    space: environment.spaceId,
-    accessToken: environment.accessToken
+    space: 'xry6e7iqylks',
+    accessToken: 'oCnDf77JKDyt4v9WUfKI4BO1ejS3zPuHh8U3'
   });
 
   getAllEnteries() {
